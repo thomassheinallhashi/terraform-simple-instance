@@ -20,7 +20,7 @@ variable "owner" {
     description = ""
 }
 
-variable "hc_region" {
+variable "se-region" {
     description = ""
 }
 
@@ -29,5 +29,9 @@ variable "purpose" {
 }
 
 variable "ttl" {
+    description = ""
+}
+
+variable "terraform" {
     description = ""
 }

@@ -10,10 +10,11 @@ resource "aws_instance" "simple-server" {
 
     tags = {
         Name = "${var.prefix}-simple-server"
-        Owner = var.owner
-        Region = var.hc_region
-        Purpose = var.purpose
-        TTL = var.ttl
+        owner = var.owner
+        se-region = var.se-region
+        purpose = var.purpose
+        ttl = var.ttl
+        terraform = var.terraform
     }
 }
 
@@ -44,10 +45,11 @@ resource "aws_security_group" "simple-server-sg" {
     }
 
     tags = {
-        Owner = var.owner
-        Region = var.hc_region
-        Purpose = var.purpose
-        TTL = var.ttl
+        owner = var.owner
+        se-region = var.se-region
+        purpose = var.purpose
+        ttl = var.ttl
+        terraform = var.terraform
     }
 }
 
@@ -96,10 +98,11 @@ resource "aws_iam_role" "simple-main-access-role" {
     assume_role_policy = data.aws_iam_policy_document.simple-assume-role.json
 
     tags = {
-        Owner = var.owner
-        Region = var.hc_region
-        Purpose = var.purpose
-        TTL = var.ttl
+        owner = var.owner
+        se-region = var.se-region
+        purpose = var.purpose
+        ttl = var.ttl
+        terraform = var.terraform
     }
 }
 
