@@ -20,7 +20,7 @@ variable "owner" {
     description = ""
 }
 
-variable "se-region" {
+variable "se_region" {
     description = ""
 }
 
