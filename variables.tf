@@ -15,3 +15,11 @@ variable "instance_type" {
 variable "prefix" {
     description = "Unique prefix for naming"
 }
+
+variable "aws_access_key" {
+    description = "AWS Access Key"
+}
+
+variable "aws_secret_key" {
+    description = "AWS Secret Key"
+}
