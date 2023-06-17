@@ -1,8 +1,0 @@
-aws_region = "us-east-1"
-key_pair = "YOUR_KEY_PAIR"
-instance_type = "t3.micro"
-prefix = "kevincx"
-owner = "youremail@example.com"
-hc_region = "NA-SOUTHEAST-ENT"
-purpose = "Spin up a simple instance in AWS"
-ttl = "24"
