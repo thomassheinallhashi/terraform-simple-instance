@@ -16,7 +16,6 @@ resource "aws_instance" "simple-server" {
         ttl = var.ttl
         terraform = var.terraform
     }
-}
 
 resource "aws_security_group" "simple-server-sg" {
     name = "${var.prefix}-server-sg"
@@ -42,8 +41,6 @@ resource "aws_security_group" "simple-server-sg" {
         to_port = 0
         protocol = "-1"
         cidr_blocks = ["0.0.0.0/0"]
-    }
-    
     }
 }
 
