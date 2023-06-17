@@ -15,23 +15,3 @@ variable "instance_type" {
 variable "prefix" {
     description = "Unique prefix for naming"
 }
-
-variable "owner" {
-    description = ""
-}
-
-variable "se_region" {
-    description = ""
-}
-
-variable "purpose" {
-    description = ""
-}
-
-variable "ttl" {
-    description = ""
-}
-
-variable "terraform" {
-    description = ""
-}
