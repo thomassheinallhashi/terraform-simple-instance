@@ -16,6 +16,7 @@ resource "aws_instance" "simple-server" {
         ttl = var.ttl
         terraform = var.terraform
     }
+}
 
 resource "aws_security_group" "simple-server-sg" {
     name = "${var.prefix}-server-sg"
@@ -41,6 +42,14 @@ resource "aws_security_group" "simple-server-sg" {
         to_port = 0
         protocol = "-1"
         cidr_blocks = ["0.0.0.0/0"]
+    }
+
+    tags = {
+        owner = var.owner
+        se-region = var.se_region
+        purpose = var.purpose
+        ttl = var.ttl
+        terraform = var.terraform
     }
 }
 
@@ -88,6 +97,12 @@ resource "aws_iam_role" "simple-main-access-role" {
     name               = "${var.prefix}-access-role"
     assume_role_policy = data.aws_iam_policy_document.simple-assume-role.json
 
+    tags = {
+        owner = var.owner
+        se-region = var.se_region
+        purpose = var.purpose
+        ttl = var.ttl
+        terraform = var.terraform
     }
 }
 
@@ -101,5 +116,4 @@ resource "aws_iam_instance_profile" "simple-main-profile" {
     name = "${var.prefix}-access-profile"
     role = aws_iam_role.simple-main-access-role.name
 }
-
 
