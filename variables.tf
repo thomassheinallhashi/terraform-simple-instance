@@ -23,3 +23,19 @@ variable "aws_access_key" {
 variable "aws_secret_key" {
     description = "AWS Secret Key"
 }
+
+variable "owner" {
+    description = ""
+}
+
+variable "se_region" {
+    description = ""
+}
+
+variable "purpose" {
+    description = ""
+}
+
+variable "ttl" {
+    description = ""
+}
