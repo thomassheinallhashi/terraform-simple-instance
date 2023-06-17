@@ -39,3 +39,7 @@ variable "purpose" {
 variable "ttl" {
     description = ""
 }
+
+variable "terraform" {
+    description = ""
+}
